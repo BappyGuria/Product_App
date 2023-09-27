@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           return ListTile(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Product_Datels(productNames: products[index].productName, productPrice: products[index].producPrice,productImage: products[index].productImage,productQuenty: products[index].quanti,)));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Product_Datels(productNames: products[index].productName, productPrice: products[index].producPrice,productImage: products[index].productImage,)));
               print('Product Name is ${products[index].productName}');
             },
             title: Text('${products[index].productName}'),

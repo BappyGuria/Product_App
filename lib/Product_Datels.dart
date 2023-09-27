@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 class Product_Datels extends StatefulWidget {
   String productNames;
   int productPrice;
-  int productQuenty;
   String productImage;
 
   Product_Datels(
-      {super.key, required this.productNames, required this.productPrice,required this.productQuenty,required this.productImage,});
+      {super.key, required this.productNames, required this.productPrice,required this.productImage,});
 
   @override
   State<Product_Datels> createState() => _Product_DatelsState();
@@ -78,7 +77,11 @@ int getProductIncrement(){
                           getProductIncrement();
                         }, child: Text('+'))
                       ],
-                    )
+                    ),
+                    ElevatedButton(onPressed: (){
+                      print(widget.productNames);
+                      print(totalQuanty * widget.productPrice);
+                    }, child: Text('Buy Now'))
                   ],
                 ),
               ),
